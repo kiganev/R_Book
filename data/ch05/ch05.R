@@ -61,8 +61,6 @@ download.file(file_url, "temp.xlsx", mode = "wb")
 xl_data2 <- read_excel("temp.xlsx")
 
 # SAS files
-write_xpt(xl_data, "example.xport", version = 5)
-
 file_url <- "https://github.com/kiganev/R_Book/raw/refs/heads/main/data/ch05/example.xport"
 download.file(file_url, "sas_data.xport", mode = "wb")
 sas_data <- read.xport("sas_data.xport")
@@ -100,15 +98,7 @@ sqlite_con <- dbConnect(drv, db_path)
 
 dbListTables(sqlite_con)
 
-sink(file = "dblisttables.txt")
-dbListTables(sqlite_con)
-sink(file = NULL)
-
 dbListFields(sqlite_con, "artists")
-
-sink(file = "dblistfields.txt")
-dbListFields(sqlite_con, "artists")
-sink(file = NULL)
 
 sqlite_query <- "SELECT 
 									trackid, 
