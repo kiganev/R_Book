@@ -60,7 +60,6 @@ file_url <- "https://github.com/kiganev/R_Book/raw/refs/heads/main/data/ch05/exa
 download.file(file_url, "temp.xlsx", mode = "wb")
 xl_data2 <- read_excel("temp.xlsx")
 
-
 # SAS files
 write_xpt(xl_data, "example.xport", version = 5)
 
