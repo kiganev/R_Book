@@ -1,3 +1,7 @@
+# Author: Kaloyan Ganev
+# Code to accompany Chapter 18 of
+# ``Applied Statistics with R''
+
 # Clear wortkspace
 rm(list = ls())
 
